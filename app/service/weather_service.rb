@@ -1,7 +1,7 @@
 # This is a service class to get data from weather API using zip code
 class WeatherService
   
-  API_KEY = CONFIG['forecast_api_key']
+  API_KEY = CONFIG['forecast_api_key'] ## The original API key has been provided in an email.
 
 	def initialize(zipcode)
 		@zip_code = zipcode
