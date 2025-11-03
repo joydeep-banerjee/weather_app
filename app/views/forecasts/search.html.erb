@@ -1,0 +1,34 @@
+<% if @loc["cod"] == "404" %>
+
+<h2>Weather Forecasts</h2>
+<br><br>
+<p> City not found. Please, enter USA's zip code like 10004 or 60653</p>
+
+<% else %>
+
+<h2><%= @loc["city"] %> Weather Forecasts</h2>
+<br><br>
+<table>
+  <tr>
+    <th>Weather</th>
+    <th>Temperature</th>
+    <th>Max temperature</th>
+    <th>Min temperature</th>
+    <th>Humidity</th>
+    <th>Visibility</th>
+    <th>Wind Speed</th>
+  </tr>
+  <tr>
+    <td><%= @loc["weather"]["description"] %></td>
+    <td><%= "#{@loc["temperature"]["temp"]} Kelvin" %></td>
+    <td><%= "#{@loc["temperature"]["temp_max"]} Kelvin" %></td>
+    <td><%= "#{@loc["temperature"]["temp_min"]} Kelvin" %></td>
+    <td><%= "#{@loc["temperature"]["humidity"]} %" %></td>
+    <td><%= "#{@loc["visibility"]} meter" %></td>
+    <td><%= "#{@loc["wind_speed"]} meter/sec" %></td>
+  </tr>
+</table>
+<br><br>
+<% end %>
+
+<%= link_to "Location page", forecasts_index_path %>

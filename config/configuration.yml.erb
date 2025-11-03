@@ -1,0 +1,14 @@
+default: &default
+  redis_host: 'localhost'
+  redis_port: 6379
+  redis_expiry: 1800
+  forecast_api_key: 7615rafdye654411111
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default

@@ -1,0 +1,5 @@
+<%= form_with url: forecasts_search_path, method: :get,html: { class: "new_assa_admin_user" } do |f| %>
+  <label for="localtion">Location ( Please, enter USA's Zip code ):</label><br><br>
+  <%= f.text_field :location, placeholder: "Zip Code", required: true %>
+  <%= f.submit "Submit", class: "btn btn-primary" %>
+<% end %>
